@@ -34,7 +34,16 @@ export function useProducts() {
           res = await fetchProductsByCategory(currentCategory.value, limit.value, skip.value);
         }
       } else if (currentQuery.value) {
-        res = await searchProducts(currentQuery.value, limit.value, skip.value);
+        const queryLower = currentQuery.value.toLowerCase();
+        // Fetch broad results from API, then strictly filter by title
+        const searchRes = await searchProducts(currentQuery.value, 150, 0);
+        const filtered = searchRes.products.filter((p: Product) => p.title.toLowerCase().includes(queryLower));
+        res = {
+          products: filtered.slice(skip.value, skip.value + limit.value),
+          total: filtered.length,
+          skip: skip.value,
+          limit: limit.value
+        };
       } else {
         res = await fetchProducts(limit.value, skip.value);
       }
