@@ -11,7 +11,7 @@ Un moderno y responsivo dashboard de productos para e-commerce construido con **
 - 🏷️ **Filtro por Categorías**: Organización de productos mediante categorías.
 - 📄 **Paginación Inteligente**: Navegación fluida entre diferentes páginas.
 - ℹ️ **Vista Detallada**: Página dedicada con galería de imágenes, descripción completa y manejo de stock.
-- ✨ **Diseño Glassmorphism**: Interfaz UI moderna con elementos translúcidos y modo oscuro/claro automático basado en el sistema.
+- ✨ **Diseño Glassmorphism**: Interfaz UI moderna con elementos translúcidos y un exclusivo **Modo Oscuro Premium (Dark Mode)** con malla animada.
 
 ## API Utilizada
 
