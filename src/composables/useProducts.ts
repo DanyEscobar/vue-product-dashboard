@@ -69,6 +69,7 @@ export function useProducts() {
 
   const handleCategorySelect = (category: string) => {
     currentCategory.value = category;
+    currentQuery.value = ''; // Reset search input when changing categories
     skip.value = 0; // Reset pagination
     loadProducts();
   };
