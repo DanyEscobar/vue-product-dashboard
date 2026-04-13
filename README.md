@@ -2,6 +2,8 @@
 
 Un moderno y responsivo dashboard de productos para e-commerce construido con **Vue 3**, **TypeScript**, y **Vite**.
 
+🚀 **Demo en vivo:** [https://vue-product-dashboard.netlify.app/](https://vue-product-dashboard.netlify.app/)
+
 ## Características
 
 - 🛍️ **Listado de Productos**: Mosaico responsivo para visualizar productos.
