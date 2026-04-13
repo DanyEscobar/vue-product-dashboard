@@ -22,9 +22,9 @@ import { RouterLink } from 'vue-router';
   z-index: 100;
   padding: 1.25rem 0;
   margin-bottom: 3rem;
-  background: rgba(11, 12, 16, 0.6);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  background: rgba(11, 12, 16, 0.15);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
