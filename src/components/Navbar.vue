@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <nav class="navbar glass">
+  <nav class="navbar">
     <div class="container">
       <RouterLink to="/" class="logo">
         <span class="text-gradient">Nova</span> Shop
