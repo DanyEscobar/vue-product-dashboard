@@ -16,19 +16,6 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style scoped>
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 1.25rem 0;
-  margin-bottom: 3rem;
-  background: rgba(11, 12, 16, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
