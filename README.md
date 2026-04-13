@@ -41,6 +41,11 @@ Sigue estos pasos para iniciar el proyecto en tu máquina local:
 
 4. **Abre tu navegador** y visita la URL proporcionada en la terminal (por defecto, normalmente es `http://localhost:5173/`).
 
+## Despliegue en Producción (Deploy) 🚀
+
+La aplicación está completamente lista para ser desplegada en plataformas en la nube como **Netlify** o **Vercel**. 
+Al ser una *Single Page Application* (SPA) basada en Vue Router, se ha incluido en la raíz pública el archivo de configuración `public/_redirects` (con la regla `/* /index.html 200`) para garantizar que la navegación directa por URL y los refrescos de página funcionen a la perfección sin arrojar errores `404 Not Found`.
+
 ## Tecnologías Principales
 
 - **Vue 3** (Composition API, `<script setup>`)
@@ -78,4 +83,8 @@ Desarrollada **sin uso de frameworks o librerías CSS externas**.
 ### 6. Sistema Híbrido de Filtrado 
 Superando el límite propio de las APIs REST simplificadas, donde no es posible combinar `endpoints` de búsqueda abierta con los de categoría específica de forma nativa:
 - El `useProducts.ts` ejecuta de forma implícita un *algoritmo dual*: Cuando el usuario cruza ambos tipos de filtros asincrónicamente por primera vez, rescata el inventario entero de la categoría desde la API y realiza una intersección algorítmica y paginación en local. Así el usuario jamás experimenta "bloqueos" al intentar acotar búsquedas.
+
+### 7. Búsqueda Estricta por Título
+Por defecto, la API de pruebas realizaba búsquedas ambiguas rastreando el término en la *descripción* general de los productos, causando retornos de "falsos positivos" (ej. buscar "Mascara" y obtener "Comida" porque un ingrediente era enmascarado).
+Para resolver esto y elevar la UX, se interceptó el servicio de búsqueda global: ahora extrae un bloque masivo de coincidencias ambiguas por red, y aplica de inmediato un colador interno estricto (`filter` a nivel de Frontend) para limpiar y reconstruir la cuadrícula garantizando que **solo se liste lo que estrictamente coincide con el nombre real del producto**.
 
